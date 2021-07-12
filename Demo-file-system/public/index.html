@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taker App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
+
+</head>
+
+<body>
+    <div class="front-page">
+        <h2 class="header">Note Taker App</h2>
+        <textarea id="note" name="note-text" class="note-area"> </textarea>
+        <br>
+        <button id="submit" onclick="saveNote()" class="submit">Save Note</button>
+        <div class="notes-link">
+            <a href="index2.html">View Notes</a>
+        </div>
+    </div>
+
+</body>
+
+<script> //function to save note
+    var textElement = document.getElementById("note") //textarea
+    function saveNote() {
+        if(textElement.value == "") {
+            return alert("text is empty!")
+        }
+        const id = getNoteId() //create note id
+        //create a function to get new note from the textarea & store it in noteObject
+        let noteObject = getExistingNotes() 
+        if(!noteObject){
+            noteObject = {}
+        }
+        noteObject[id] = textElement.value
+        localStorage.setItem('notes', JSON.stringify(noteObject))
+        alert('Note Saved')
+    }
+</script>
+
+</html>

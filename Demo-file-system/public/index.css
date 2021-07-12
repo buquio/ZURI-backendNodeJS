@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color:#2C354A;
+    text-align: center;
+
+}
+.front-page{
+    width: 70%;
+    margin: 100px auto;
+    background-color: aliceblue;
+    padding: 10px;
+    height: 250px;
+
+}
+
+h2{
+    margin: 10px;
+}
+
+
+textarea{
+    width: 80%;
+    height: 100px;
+
+}
+
+button{
+    background-color:#A5B2D3 ;
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 20px;
+    font-size: 16px;
+
+}
+a{
+    color: black;
+}
+.notes-link{
+    font-size: 16px;
+}

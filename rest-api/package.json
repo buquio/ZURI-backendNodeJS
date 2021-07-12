@@ -1,0 +1,15 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "* installing Express\r * setting up express app\r * creating GET and POST routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
