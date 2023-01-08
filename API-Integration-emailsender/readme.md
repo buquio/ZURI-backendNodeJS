@@ -8,7 +8,7 @@
 ## Action points
 1. Set up and install the dependencies
 npm init -y
-npm install nodemailer express dotenv body-parser
+npm install nodemailer, express, dotenv,  body-parser
 npm install nodemon --save dev (optional dev dependency)
 -update the start commands in `package.json` (optional)
 2. create a server

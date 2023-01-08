@@ -1,9 +1,9 @@
 
-const fs = require('fs')
+const fs = require('fs')  //file system
+
 const path = require('path')
 
 
-//file system
 ///Read from a file
 // let filePath = path.join(__dirname, 'demo.txt')
 

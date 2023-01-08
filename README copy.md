@@ -11,7 +11,7 @@ Learning NodeJS with Zuri Program
      - models
      - routes
      - .env
-     - server.js
+     - server.js or index.js
      - .gitignore
      - readme.md
 
@@ -32,7 +32,7 @@ Learning NodeJS with Zuri Program
 
 ### 3. install needed pakages
 npm init -y
-npm install express express-validator jsonwebtoken bcrypt dotenv 
+npm install express express-validator, jsonwebtoken, bcrypt, dotenv 
 npm install nodemon --save dev
 -in your package.json change your main: to server.js
 

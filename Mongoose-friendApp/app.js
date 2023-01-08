@@ -1,7 +1,7 @@
 const app = require('express')();
-
-
 const mongoose = require('mongoose');
+
+
 //connection string  mongodb //localhost: 27017
 const connectionString = "mongodb://localhost:27017/newdb"
 const {Schema} = mongoose;
@@ -43,7 +43,6 @@ const Friend = mongoose.model('Friend', friendSchema);
 
 
 ////create
-
 ////read
 //find({}) -all
 //find(query)

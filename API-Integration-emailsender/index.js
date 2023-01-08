@@ -27,7 +27,7 @@ try{
         name, //variable declared in emailtemplete 
         email,
         subject,
-        message: await eMessage(name, email, subject, message)//u need emailTemplate for message dat will be sent back to u.
+        message: await eMessage(name, email, subject, message)//u need emailTemplate for confirmat message dat will be sent back to u.
     })
     res.status(201).json({message:'Email sent'}); //send reponse back to user/browser/client/postman 
 

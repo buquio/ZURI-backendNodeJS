@@ -5,7 +5,7 @@ fs.writeFile('myfirstFile.txt','Hello World', (err)=> {
    if (err) throw err;  //if there is an error throw error
    console.log('file created sucessfully');
 })
-
+//run the server-i.e node index.js
 
 ////append or update the file 
 /////Note: append hello world with Learning Nodejs File System
