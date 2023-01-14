@@ -14,7 +14,9 @@ app.use('/', express.static(__dirname+ '/views')); //FRONTEND-VIEWS FOLDER
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, ()=> {
+
     console.log(`server listening on port ${PORT}`)
+
 })
 
 app.post('/', async (req, res) => { 
@@ -36,3 +38,4 @@ try{
     res.status(500).json({message:'Email not sent'}) //if error send reponse back to index.html/browser/client/postman
 }
 })
+
