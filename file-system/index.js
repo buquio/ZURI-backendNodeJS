@@ -60,7 +60,8 @@ fs.writeFile('myfirstFile.txt','Hello World', (err)=> {
 //     res.write(data);
 //     res.end();
 // })
-// }).listen(4000); //run the server-i.e node fileSystem.js
+// }).listen(4000); 
+//run the server-i.e node fileSystem.js
 
 
 
@@ -80,3 +81,4 @@ fs.writeFile('myfirstFile.txt','Hello World', (err)=> {
 //     })
 //     }).listen(4000);
     
+//run the server-i.e node fileSystem.js

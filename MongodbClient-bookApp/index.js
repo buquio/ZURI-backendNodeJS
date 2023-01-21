@@ -5,7 +5,7 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 //connection string- mongodb //localhost: 27017
 const connectionString = "mongodb://localhost:27017/bookshore"
-//mongo client
+//mongo client connect to the database
 const client = new MongoClient(connectionString,{
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -40,6 +40,15 @@ client.connect((err, connectedClient) => {
   }
  })
 })
+
+
+///////write testing
+app.get('/books', (req, res) => {
+    client.connect((err, connectionString) => {
+    if(err) return res.status(500).json
+})
+})
+
 
 //INSERTONE using    route  '/books'
 // app.post('/books', (req, res) =>{
