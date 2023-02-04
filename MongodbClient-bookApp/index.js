@@ -11,9 +11,12 @@ const client = new MongoClient(connectionString,{
     useUnifiedTopology: true
 });
 
+// npm install
+// install nodemon  npm install --save-dev nodemon
+// run using npm start   OR  node index.js   OR  npm run devStart
 
 
-
+// USING TERMINAL CONSOLE.LOG  OR POSTMAN
 
 //FIND -using node index.js to call & console.log it
 // client.connect((err, connectedClient) =>{
@@ -27,46 +30,46 @@ const client = new MongoClient(connectionString,{
 // })
 
 
-//FIND using route  '/books'
-app.get('/books', (req, res) => {
-client.connect((err, connectedClient) => {
-    if(err) return res.status(500).json({message: err});
-    const db = connectedClient.db(); 
-    db.collection('books').find([]).toArray, (err,result) => {
-        if(err) {
-            return res.status(500).json({message: err})
-        }
-        return res.status(200).json({books: result })
-  }
- })
-})
+//FIND -using postman
+// app.get('/books', (req, res) => {
+// client.connect((err, connectedClient) => {
+//     if(err) return res.status(500).json({message: err});
+//     const db = connectedClient.db(); 
+//     db.collection('books').find([]).toArray, (err,result) => {
+//         if(err) {
+//             return res.status(500).json({message: err})
+//         }
+//         return res.status(200).json({books: result })
+//   }
+//  })
+// })
 
 
 ///////write testing
-app.get('/books', (req, res) => {
-    client.connect((err, connectionString) => {
-    if(err) return res.status(500).json
-})
-})
+// app.get('/books', (req, res) => {
+//     client.connect((err, connectionString) => {
+//     if(err) return res.status(500).json
+// })
+// })
 
 
-//INSERTONE using    route  '/books'
-// app.post('/books', (req, res) =>{
-//     client.connect((err, connectedClient) => {
-//         if(err) 
-//         return res.status(500).json({message: err});
-//         const db = connectedClient.db();
-//         db.collection('books').insertOne({
-//             author: req.body.author,
-//             title: req.body.title
-//         }), (err,result) => {
-//             if(err) {
-//                 return res.status(500).json({message: err});
-//             }
-//             return res.status(200).json({message: "new book added to bookshop" })
+//INSERTONE -using postman
+app.post('/books', (req, res) =>{
+    client.connect((err, connectedClient) => {
+        if(err) 
+        return res.status(500).json({message: err});
+        const db = connectedClient.db();
+        db.collection('books').insertOne({
+            author: req.body.author,
+            title: req.body.title
+        }), (err,result) => {
+            if(err) {
+                return res.status(500).json({message: err});
+            }
+            return res.status(200).json({message: "new book added to bookshop" })
         
-//       }
-//      })
-//     })
+      }
+     })
+    })
 
 app.listen(5000, () => console.log('server up and running'))

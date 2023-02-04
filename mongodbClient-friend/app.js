@@ -1,4 +1,4 @@
-// # mongod ==> create a mongodb server
+// # mongod ==> starts a mongodb server
 // # mongo ==> starts the mongo shell
 const app = require('express')();
 const mongodb = require('mongodb');

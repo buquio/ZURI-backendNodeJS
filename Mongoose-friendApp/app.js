@@ -19,6 +19,10 @@ mongoose.connect(connectionString,{
     }
 })
 
+// npm install
+// npm install --save-dev nodemon 
+// run using npm start   OR node app.js
+
 
  //schema
  const friendSchema = new Schema({
@@ -59,13 +63,13 @@ Friend.create({
     if(err) {
         console.log({err})
     }else {
-        console.log({newFriend: friend})
+        console.log({newFriend: friend})  //IT WILL SHOW RESULT IN THE TERMINAL
 
     }
 })
 
 
-//EXAMPLE WITHOUT ROUTES
+//EXAMPLE WITHOUT APP/EXPRESS ROUTES --TEST USING CONSOLE.LOG
 // //find
 // Friend.find([name: "Kingabesh", age: 40, netWorth:300000], (err, friends) =>{
 //     if(err) console.log(err)
@@ -89,10 +93,10 @@ Friend.create({
 // //const Friend = mongoose.model('Friend', friendSchema);
 
 
-//EXAMPLE WITH ROUTES
+//EXAMPLE WITH APP/EXPRESS ROUTES ---TEST USING POSTMAN
 // //create 4 routes
-// //fetch all friends in the database:
-// //add a new friend to the database
+// //fetch all friends in the database --app.get
+// //add a new friend to the database --app.post
 // //update an existing friend
 // //delete an existing friend
 
