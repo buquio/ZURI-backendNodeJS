@@ -21,6 +21,13 @@ const client = new MongoClient(str,{
       console.log(err)
   }
   }
+//???npm WARN mongoClient@1.0.0 No description
+  // npm install
+// npm install --save-dev nodemon 
+
+//uses
+// run using npm start   OR node app.js
+//mongodb is running already
 
   
 //INSERT//////////
@@ -42,4 +49,4 @@ const client = new MongoClient(str,{
  
 
 
-app.listen(5000, () => console.log('app connnected'))
+app.listen(3000, () => console.log('app connnected'))

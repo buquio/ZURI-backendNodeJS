@@ -19,15 +19,15 @@ const client = new MongoClient(connectionString,{
 // USING TERMINAL CONSOLE.LOG  OR POSTMAN
 
 //FIND -using node index.js to call & console.log it
-// client.connect((err, connectedClient) =>{
-//     // if(err) throw err;
-//     if(err) return res.status(500).json({message: err});
-//     const db = connectedClient.db();
-//     db.collection('books').find([]).toArray((err,result) => {
-//         console.log(result)
-//     })
+client.connect((err, connectedClient) =>{
+    // if(err) throw err;
+    if(err) return res.status(500).json({message: err});
+    const db = connectedClient.db();
+    db.collection('books').find([]).toArray((err,result) => {
+        console.log(result)
+    })
         
-// })
+})
 
 
 //FIND -using postman
@@ -45,31 +45,25 @@ const client = new MongoClient(connectionString,{
 // })
 
 
-///////write testing
-// app.get('/books', (req, res) => {
-//     client.connect((err, connectionString) => {
-//     if(err) return res.status(500).json
-// })
-// })
 
 
 //INSERTONE -using postman
-app.post('/books', (req, res) =>{
-    client.connect((err, connectedClient) => {
-        if(err) 
-        return res.status(500).json({message: err});
-        const db = connectedClient.db();
-        db.collection('books').insertOne({
-            author: req.body.author,
-            title: req.body.title
-        }), (err,result) => {
-            if(err) {
-                return res.status(500).json({message: err});
-            }
-            return res.status(200).json({message: "new book added to bookshop" })
+// app.post('/books', (req, res) =>{
+//     client.connect((err, connectedClient) => {
+//         if(err) 
+//         return res.status(500).json({message: err});
+//         const db = connectedClient.db();
+//         db.collection('books').insertOne({
+//             author: req.body.author,
+//             title: req.body.title
+//         }), (err,result) => {
+//             if(err) {
+//                 return res.status(500).json({message: err});
+//             }
+//             return res.status(200).json({message: "new book added to bookshop" })
         
-      }
-     })
-    })
+//       }
+//      })
+//     })
 
-app.listen(5000, () => console.log('server up and running'))
+app.listen(4000, () => console.log('server up and running'))

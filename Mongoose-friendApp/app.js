@@ -21,7 +21,10 @@ mongoose.connect(connectionString,{
 
 // npm install
 // npm install --save-dev nodemon 
+
+//uses
 // run using npm start   OR node app.js
+//mongodb is running already
 
 
  //schema
