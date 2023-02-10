@@ -3,6 +3,11 @@
 const app = require('express')();
 const mongodb = require('mongodb');
 
+//WHEN YOU USE THIS .MONGOCLIENT CONNECTS TO ATLAS --NOT SURE????
+//THATS WHY ITS NOT SHOWING RESULT ON POSTMAN AND MONGODB COMPASS
+//BUT SERVER IS RUNNING
+//???  npm WARN mongoClient@1.0.0 No description
+
 
 const { MongoClient } = mongodb;
 //connection string  27017
@@ -21,16 +26,17 @@ const client = new MongoClient(str,{
       console.log(err)
   }
   }
-//???npm WARN mongoClient@1.0.0 No description
+  
   // npm install
 // npm install --save-dev nodemon 
 
 //uses
 // run using npm start   OR node app.js
-//mongodb is running already
+//mongodb is running 
 
   
-//INSERT//////////
+//INSERT//////////see result on mongodb compass
+//result IS NOT SHOWING on mongodb compass
   connectToDB(connectionString)
   .then(db =>{
     console.log('database connected') 

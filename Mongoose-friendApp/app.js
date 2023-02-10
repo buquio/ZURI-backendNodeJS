@@ -1,6 +1,11 @@
 const app = require('express')();
+const e = require('express');
 const mongoose = require('mongoose');
 
+
+//????can i post to this database on postman if so how?
+// e.g {"name": "abesh","age": 24,"netWorth":80000000000,"isCool": true}
+//????also which url on postman is it localhost:27017/newdb or localhost:5000/
 
 //connection string  mongodb //localhost: 27017
 const connectionString = "mongodb://localhost:27017/newdb"
@@ -61,7 +66,7 @@ Friend.create({
     name: "Kingabesh",
     age: 40,
     netWorth:40000000000,
-    isCool: true,
+    isCool: true
 }, function(err, friend){
     if(err) {
         console.log({err})
